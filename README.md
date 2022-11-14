@@ -1,28 +1,27 @@
 RetoWeb
 -------
 
-Configurar .env con la configuración de la base de 
-datos necesaria.
-
 Ejecutar el comando "php artisan migrate --seed"
 para generar las migraciones y datos de prueba.
 
-Al archivo "docker-compose.yml" se le agregó las siguiemtes
-líneas para la imagen del proyecto de Laravel dentro de Docker:
-https://github.com/sprintcube/docker-compose-lamp
+Al archivo "docker-compose.yml" del proyecto Docker:
+"https://github.com/sprintcube/docker-compose-lamp",
+se le agregaron las siguientes líneas correspondientes
+a la imagen del proyecto de Larevel para Docker.
 
+Laravel se ejecuta en el puerto 8081
 -------------------------------------------------
 services:
   app:
     build:
       context: .
-      dockerfile: /retoweb/.docker/Dockerfile
+      dockerfile: retoweb/.docker/Dockerfile
     image: 'laravelapp'
     ports:
       - 8081:80
     volumes:
       - ./:/var/www/html
--------------------------------------------------
+------------------------------------------------
 
 Archivo .env
 
